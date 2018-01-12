@@ -53,7 +53,15 @@ public class Tarea
             aDevolver = "[ ] " + aDevolver;
         }
         return aDevolver; 
-    }    
+    }   
+       
+    /**
+     * Devuelve la prioridad de la tarea.
+     */
+    public int getPrioridad()
+    {
+        return prioridad;
+    }
     
     /**
      * Metodos setter
@@ -69,5 +77,6 @@ public class Tarea
     public void prioridadTarea(int nuevaPrioridad)
     {
         prioridad = nuevaPrioridad;
-    }  
+    } 
+    
 }

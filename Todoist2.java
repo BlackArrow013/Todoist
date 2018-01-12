@@ -66,10 +66,16 @@ public class Todoist2{
      */
     public void tareaDeMayorPrioridad()
     {
-        int contador = 1;        
-        while (contador < listaDeTareas.size()) {
-            
-            contador++;
+        if (listaDeTareas.size() > 0) {   
+            Tarea tareaPrioridadMaxima = listaDeTareas.get(0);
+            int prioridadMaxima = 0;        
+            for (Tarea tareaActual: listaDeTareas) {
+                if (tareaActual.getPrioridad() >= prioridadMaxima) {
+                    tareaPrioridadMaxima = tareaActual;
+                    prioridadMaxima = tareaActual.getPrioridad();
+                }
+                System.out.println(tareaPrioridadMaxima.getDatosTarea());            
+            }
         }
     }
     
